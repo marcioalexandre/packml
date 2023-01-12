@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+infra:
+  config:
+    rabbitmq:
+      exchange: pharma.exchange
+      queue: pharma.queue
+      routing-key: pharma.rk
+  security:
+    username: user
+    password: 1234
+    role: USER
+
+spring:
+  profiles:
+    active: dev

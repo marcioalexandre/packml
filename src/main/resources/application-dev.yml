@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/packml_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+  flyway:
+    baseline-on-migrate: false
+    locations:
+      - classpath:db/migration/postgresql
